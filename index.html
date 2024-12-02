@@ -91,6 +91,25 @@
             left: 60%;
         }
 
+        .snowflake1C {
+            position: absolute;
+            color: #FFDB58;
+            font-size: 1.5em;
+            pointer-events: none;
+            animation: snow linear infinite;
+            opacity: 0.8;
+        }
+        .snowflake1C:nth-child(odd) {
+            animation-duration: 10s;
+            animation-delay: -2s;
+            left: 20%;
+        }
+        .snowflake1C:nth-child(even) {
+            animation-duration: 8s;
+            animation-delay: -1s;
+            left: 60%;
+        }
+
     </style>
 </head>
 <body>
@@ -117,22 +136,45 @@
 
 <div class="snowflakes" aria-hidden="true">
     <div class="snowflake">❄</div>
-    <div class="snowflake">1С</div>
+
     <div class="snowflake">❄</div>
-    <div class="snowflake">1С</div>
+
     <div class="snowflake">❄</div>
-    <div class="snowflake">1С</div>
+
     <div class="snowflake">❄</div>
-    <div class="snowflake">1С</div>
+
     <div class="snowflake">❄</div>
-    <div class="snowflake">1С</div>
+
 </div>
+
+<div class="snowflakes1С" aria-hidden="true">
+
+    <div class="snowflake1C">1С</div>
+
+    <div class="snowflake1C">1С</div>
+
+    <div class="snowflake1C">1С</div>
+
+    <div class="snowflake1C">1С</div>
+
+    <div class="snowflake1C">1С</div>
+</div>
+
 <script>
     let snowflakes = document.querySelectorAll('.snowflake');
     snowflakes.forEach(snowflake => {
         snowflake.style.left = Math.random() * window.innerWidth + "px";
-        snowflake.style.animationDuration = (Math.random() * 5 + 5) + "s"; // Random duration
+        snowflake.style.animationDuration = (Math.random() * 3 + 3) + "s"; // Random duration
         snowflake.style.opacity = Math.random(); // Random opacity
+    });
+</script>
+
+<script>
+    let snowflakes1C = document.querySelectorAll('.snowflake1C');
+    snowflakes1C.forEach(snowflake1C => {
+        snowflake1C.style.left = Math.random() * window.innerWidth + "px";
+        snowflake1C.style.animationDuration = (Math.random() * 3 + 3) + "s"; // Random duration
+        snowflake1C.style.opacity = Math.random(); // Random opacity
     });
 </script>
 
