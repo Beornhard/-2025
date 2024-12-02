@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на новогодний корпоратив</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #003366; /* Темно-синий текст */
+            height: 100vh;
+            background-image: url('https://a.d-cd.net/uN47m-n8CnO55wQDZ14uAjd2q4M-1920.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .snow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+            background: radial-gradient(circle, white 20%, transparent 20%);
+            animation: snowfall 10s linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-size: 1.2em;
+            color: #006400; /* Светло-зеленый текст */
+        }
+
+        .qr-code {
+            margin-top: 20px;
+            width: 150px;
+        }
+        
+        h1 {
+            color: #ffcc00; /* Желтый заголовок */
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #003366; /* Темно-синий для подвала */
+        }
+
+	@keyframes snow {
+            0% { top: -10%; }
+            100% { top: 100%; }
+        }
+        .snowflake {
+            position: absolute;
+            color: white;
+            font-size: 1.5em;
+            pointer-events: none;
+            animation: snow linear infinite;
+            opacity: 0.8;
+        }
+        .snowflake:nth-child(odd) {
+            animation-duration: 10s;
+            animation-delay: -2s;
+            left: 20%;
+        }
+        .snowflake:nth-child(even) {
+            animation-duration: 8s;
+            animation-delay: -1s;
+            left: 60%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="snow"></div>
+
+    <div class="content">
+        <h1>Приглашение на новогодний корпоратив!</h1>
+        <p>Дорогие коллеги!</p>
+        <p>Приглашаем вас на наш новогодний корпоратив, который пройдет:</p>
+        <p><strong>Адрес:</strong> Проезд Серебрякова, 6</p>
+        <p><strong>Время сбора:</strong> 17:00</p>
+        <p>Будем рады видеть каждого из вас на этом праздничном событии!</p>
+
+        <a href="https://yandex.ru/maps/213/moscow/house/proyezd_serebryakova_6/Z04YcAJhSkMAQFtvfXR1d3VlZg==/?ll=37.651367%2C55.846962&z=17" target="_blank">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fyandex.ru%2Fmaps%2F213%2Fmoscow%2Fhouse%2Fproyezd_serebryakova_6%2FZ04YcAJhSkMAQFtvfXR1d3VlZg%3D%3D%2F%3Fll%3D37.651367%252C55.846962%26z%3D17&size=150x150" alt="QR Code" class="qr-code">
+        </a>
+
+        <div class="footer">
+            <p>&copy; 2024 Новая Платформа</p>
+        </div>
+    </div>
+
+<div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">❄</div>
+    <div class="snowflake">1С</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">1С</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">1С</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">1С</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">1С</div>
+</div>
+<script>
+    let snowflakes = document.querySelectorAll('.snowflake');
+    snowflakes.forEach(snowflake => {
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.animationDuration = (Math.random() * 5 + 5) + "s"; // Random duration
+        snowflake.style.opacity = Math.random(); // Random opacity
+    });
+</script>
+
+</body>
+</html>
